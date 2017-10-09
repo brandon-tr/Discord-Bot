@@ -2,10 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const Crawler = require("crawler");
 var owjs = require('overwatch-js');
+const Pageres = require('pageres');
+var fs = require('fs');
 
 
 var c = new Crawler({
-    maxConnections : 10,
+    maxConnections : 25,
     // This will be called for each crawled page 
     callback : function (error, res, done) {
         if(error){
@@ -67,12 +69,25 @@ client.on('message', message => {
                 }else if(res.statusCode === 404) {
                     message.reply('Invalid Page')
                 }else {
-                   message.reply(res.$('title').text())
-                   message.reply('Wins and Losses'+'\n'+res.$("body [class='WinRatioTitle']").text())
-                   var test = res.$("td [class='KDA']").contents().text()
-                   test = test.split('KDA')[3]
-                   message.reply('KDA' + test)
-                   message.reply(res.$("span[class='tierRank']").text())
+                //    message.reply(res.$('title').text())
+                //    message.reply('Wins and Losses'+'\n'+res.$("body [class='WinRatioTitle']").text())
+                //    var test = res.$("td [class='KDA']").contents().text()
+                //    test = test.split('KDA')[3]
+                //    message.reply('KDA' + test)
+                //    message.reply(res.$("span[class='tierRank']").text())
+                const pageres = new Pageres({delay: 0})
+                .src(this.uri, ['640x480'])
+                .dest(__dirname)
+                .run()
+                .then(() => 
+                        message.reply({
+                            file: './'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png'
+                        }).then(
+                            setTimeout(function(){
+                                fs.unlink('./'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png')
+                            }, 500) 
+                        )
+                    )
                 }
                 done();
             }

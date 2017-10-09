@@ -81,7 +81,7 @@ client.on('message', message => {
                 .run()
                 .then(() => 
                         message.reply({
-                            file: './'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png'
+                            file: __dirname+ `/na.op.gg!summoner!userName=${character}`+'-640x480.png'
                         })
                         // .then(
                         //     setTimeout(function(){

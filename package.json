@@ -1,0 +1,14 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "A bot for discord",
+  "main": "bot.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Brandon Travis",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
+}

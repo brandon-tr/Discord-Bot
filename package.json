@@ -9,6 +9,9 @@
   "author": "Brandon Travis",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "crawler": "^1.0.5",
+    "discord.js": "^11.2.1",
+    "owjs": "^0.1.1",
+    "pageres": "^4.5.1"
   }
 }

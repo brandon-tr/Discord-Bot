@@ -83,11 +83,11 @@ client.on('message', message => {
                         message.reply({
                             file: __dirname+ `/na.op.gg!summoner!userName=${character}`+'-640x480.png'
                         })
-                        // .then(
-                        //     setTimeout(function(){
-                        //         fs.unlink('./'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png')
-                        //     }, 500) 
-                        // )
+                        .then(
+                            setTimeout(function(){
+                                fs.unlink('./'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png')
+                            }, 500) 
+                        )
                     )
                 }
                 done();
@@ -143,4 +143,4 @@ client.on('guildMemberAdd', member => {
 })
 
  
-client.login('MzY2MzY1NTgzODM2NDQ2NzMx.DLxVXA.vNMgonLH364IRiJhpTfx4NAYVxg');
+client.login('');

@@ -76,16 +76,16 @@ client.on('message', message => {
                 //    message.reply('KDA' + test)
                 //    message.reply(res.$("span[class='tierRank']").text())
                 const pageres = new Pageres({delay: 0})
-                .src(this.uri, ['640x480'])
+                .src(this.uri, ['1920x1080'])
                 .dest(__dirname)
                 .run()
                 .then(() => 
                         message.reply({
-                            file: __dirname+ `/na.op.gg!summoner!userName=${character}`+'-640x480.png'
+                            file: __dirname+ `/na.op.gg!summoner!userName=${character}`+'-1920x1080.png'
                         })
                         .then(
                             setTimeout(function(){
-                                fs.unlink(__dirname+ `/na.op.gg!summoner!userName=${character}`+'-640x480.png')
+                                fs.unlink(__dirname+ `/na.op.gg!summoner!userName=${character}`+'-1920x1080.png')
                             }, 500) 
                         )
                     )

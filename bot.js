@@ -85,7 +85,7 @@ client.on('message', message => {
                         })
                         .then(
                             setTimeout(function(){
-                                fs.unlink('./'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png')
+                                fs.unlink(__dirname+ `/na.op.gg!summoner!userName=${character}`+'-640x480.png')
                             }, 500) 
                         )
                     )

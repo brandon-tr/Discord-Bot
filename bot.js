@@ -123,7 +123,7 @@ client.on('message', message => {
                         message.reply('Invalid Page')
                     }else {
                        message.reply(res.$("div[class='profile-info']").text().trim())
-                       message.reply(res.$("div[class='stats-large']").append('<br>').text().trim())
+                       message.reply(res.$("div[class='stats-large']").text().trim())
                     }
                     done();
                 }
@@ -142,4 +142,4 @@ client.on('guildMemberAdd', member => {
 })
 
  
-client.login('');
+client.login('MzY2MzY1NTgzODM2NDQ2NzMx.DLxVXA.vNMgonLH364IRiJhpTfx4NAYVxg');

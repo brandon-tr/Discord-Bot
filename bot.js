@@ -82,11 +82,12 @@ client.on('message', message => {
                 .then(() => 
                         message.reply({
                             file: './'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png'
-                        }).then(
-                            setTimeout(function(){
-                                fs.unlink('./'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png')
-                            }, 500) 
-                        )
+                        })
+                        // .then(
+                        //     setTimeout(function(){
+                        //         fs.unlink('./'+ `na.op.gg!summoner!userName=${character}`+'-640x480.png')
+                        //     }, 500) 
+                        // )
                     )
                 }
                 done();

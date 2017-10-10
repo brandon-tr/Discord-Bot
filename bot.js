@@ -4,6 +4,7 @@ const Crawler = require("crawler");
 var owjs = require('overwatch-js');
 const Pageres = require('pageres');
 var fs = require('fs');
+var request = require('request');
 
 
 var c = new Crawler({
@@ -129,6 +130,13 @@ client.on('message', message => {
                     done();
                 }
             }]);
+        })
+    }
+    if(message.content.includes('!bot')) {
+        var content = message.content.split('!bot ')[1];
+        request('http://www.cleverbot.com/getreply?key=&input='+content, function (error, response, body) {
+            var output = JSON.parse(body)
+            message.reply(output.output)
         })
     }
     for (var index = 0; index < curseWords.length; index++) {

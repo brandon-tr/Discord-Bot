@@ -134,7 +134,7 @@ client.on('message', message => {
     }
     if(message.content.includes('!bot')) {
         var content = message.content.split('!bot ')[1];
-        request('http://www.cleverbot.com/getreply?key=&input='+content, function (error, response, body) {
+        request('http://www.cleverbot.com/getreply?key=CC4viggn6cxF07Ccm7uCzxPnHXQ&input='+content, function (error, response, body) {
             var output = JSON.parse(body)
             message.reply(output.output)
         })
@@ -151,4 +151,4 @@ client.on('guildMemberAdd', member => {
 })
 
  
-client.login('');
+client.login('MzY2MzY1NTgzODM2NDQ2NzMx.DLxVXA.vNMgonLH364IRiJhpTfx4NAYVxg');

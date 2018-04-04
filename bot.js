@@ -20,7 +20,7 @@ var c = new Crawler({
     }
 });
 
-const curseWords = ['fuck', 'shit', 'fu-ck', 'nigger', 'nig-ger']
+const curseWords = ['curseWords']
 
 client.on('ready', () => {
   console.log('I am ready!');

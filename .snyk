@@ -1,8 +1,13 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.8.0
+version: v1.12.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
     - pageres > easydate > mocha > debug:
         patched: '2017-11-10T22:28:34.914Z'
+  'npm:lodash:20180130':
+    - crawler > seenreq > ioredis > lodash:
+        patched: '2018-07-03T07:05:40.433Z'
+    - pageres > get-res > w3counter > cheerio > lodash:
+        patched: '2018-07-03T07:05:40.433Z'

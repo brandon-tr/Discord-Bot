@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Brandon Travis",
   "license": "MIT",
@@ -17,7 +18,7 @@
     "owjs": "^0.1.1",
     "pageres": "^4.5.1",
     "request": "^2.83.0",
-    "snyk": "^1.49.1"
+    "snyk": "^1.88.0"
   },
   "snyk": true
 }

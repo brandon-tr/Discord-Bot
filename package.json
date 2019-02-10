@@ -15,7 +15,7 @@
     "discord.js": "^11.2.1",
     "overwatch-js": "^1.6.0",
     "owjs": "^0.1.1",
-    "pageres": "^4.5.1",
+    "pageres": "^5.0.0",
     "request": "^2.83.0",
     "snyk": "^1.49.1"
   },

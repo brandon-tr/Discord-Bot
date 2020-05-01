@@ -1,8 +1,15 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.8.0
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
     - pageres > easydate > mocha > debug:
         patched: '2017-11-10T22:28:34.914Z'
+  SNYK-JS-LODASH-567746:
+    - crawler > lodash:
+        patched: '2020-05-01T01:31:09.149Z'
+    - overwatch-js > lodash:
+        patched: '2020-05-01T01:31:09.149Z'
+    - overwatch-js > request-promise > request-promise-core > lodash:
+        patched: '2020-05-01T01:31:09.149Z'

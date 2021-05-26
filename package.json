@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "crawler": "^1.0.5",
-    "discord.js": "^11.2.1",
+    "discord.js": "^12.0.0",
     "overwatch-js": "^1.6.0",
     "owjs": "^0.1.1",
     "pageres": "^4.5.1",
